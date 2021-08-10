@@ -10,12 +10,12 @@ const Figure = () => {
 
 
     return (<div className={classes.figureContainer}>
-            <div className={classes.head}>head</div>
-            <div className={classes.body}>body</div>
-            <div className={classes.rightArm}>brazo derecho</div>
-            <div className={classes.leftArm}>brazo izquierdo</div>
-            <div className={classes.rigthLeg}>pata derecha</div>
-            <div className={classes.leftLeg}>pata izquieda</div>
+            <div className={classes.head}><div></div></div>
+            <div className={classes.body}></div>
+            <div className={classes.rightArm}><div></div></div>
+            <div className={classes.leftArm}><div></div></div>
+            <div className={classes.rightLeg}><div></div></div>
+            <div className={classes.leftLeg}><div></div></div>
     </div>)
 }
 

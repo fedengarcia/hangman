@@ -1,5 +1,5 @@
 export const HangStyle = (theme) => ({
-    hang:{
+    hangContainer:{
         width:'2em',
         display:'flex',
         justifyContent:'center',
@@ -27,7 +27,7 @@ export const HangStyle = (theme) => ({
     },
     rope:{
         position:'absolute',
-        left:'17.6em',
+        left:'18.6em',
         top:'11.1em',
         '& > div':{
             width: '0.2em',
