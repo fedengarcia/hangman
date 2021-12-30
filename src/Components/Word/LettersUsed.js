@@ -5,15 +5,15 @@ import {WordStyles} from './WordStyles';
 
 const useStyles = makeStyles((theme) => WordStyles(theme));
 
-const WrongWords = ({letters}) => {
+const LettersUsed = ({letterPress}) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.wrongLettersContainer}>
-            <h2>Wrong letters:</h2>
+        <div className={classes.LettersUsedContainer}>
+            <h2>LETRAS USADAS: ${letterPress}</h2>
             {/* {letters.map((letter) => <p key={letter.index()}>{`${letter},`}</p>)} */}
         </div>
     )
 }
 
-export default WrongWords;
+export default LettersUsed;

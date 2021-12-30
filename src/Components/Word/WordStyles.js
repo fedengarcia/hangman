@@ -4,9 +4,9 @@ export const WordStyles = (theme) => ({
         width:'50%',
         height:'4em',
     },
-    wrongLettersContainer:{
+    LettersUsedContainer:{
         display:'flex',
-        justifyContent:'flex-start',
+        justifyContent:'space-around',
         alignItems:'center',
         marginLeft:'3em',
     }

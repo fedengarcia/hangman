@@ -9,7 +9,6 @@ const Header = () => {
 
     return (<header className={classes.headerContainer}>
         <h1>HANG MAN</h1>
-        <p>Encontra la palabra - Ingresa una letra</p>
     </header>)
 }
 

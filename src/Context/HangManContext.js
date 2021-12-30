@@ -3,10 +3,11 @@ import React, {createContext,useState} from 'react';
 export const HangManModeContext = createContext();
 
 export const HangManContext = (props) => {
-    const [secretWord,setSecretWord] = useState([]);
-    const [guessWord,setGuessWord] =  useState([]);
-    const [lettersUsed,setLetterUsed] = useState([]);
-
+    const [words,setWords] = useState([]);
+    const [secretWord,setSecretWord] = useState([]); // GUARDAR PALABRA TOKENIZADA
+    const [guessWord,setGuessWord] =  useState([]); // CARGAR LAS LETRAS ACERTADAS 
+    const [lettersUsed,setLetterUsed] = useState([]); // CARGAR LAS LETRAS USADAS
+    const [letterPress, setLetterPress] = useState(undefined); // LETRA APRETADA
 
 
     const checkLetter = (letter) => {
@@ -25,7 +26,7 @@ export const HangManContext = (props) => {
     }
 
 
-    return <HangManModeContext.Provider value={{setSecretWord,guessWord,lettersUsed,checkLetter}}>
+    return <HangManModeContext.Provider value={{setWords}}>
         {props.children}
     </HangManModeContext.Provider>
 

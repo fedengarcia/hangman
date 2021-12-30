@@ -4,15 +4,15 @@ export const GameContainerStyle = (theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        width: 'auto',
-        '& > div:first-child':{
-            display:'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            flexDirection: 'row',
-            marginBottom: '1em',
-            height:'auto',
-            width:'50%',
-        }
+    },
+    hangManContainer:{
+        width:'auto',
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        flexDirection:'row',
+        marginBottom: '2em',
+        marginTop: '2em',
+
     }
 })

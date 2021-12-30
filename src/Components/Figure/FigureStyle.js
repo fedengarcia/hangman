@@ -1,10 +1,13 @@
 export const FigureStyle = (theme) => ({
     figureContainer:{
-        width:'auto',
+        width:'50px',
+        height:'50px',
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
         flexDirection:'column',
+        backgroundColor: 'grey',
+
     },
     head:{
         width:'auto',
