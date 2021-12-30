@@ -14,7 +14,7 @@ const useStyle = makeStyles((theme) => GameContainerStyle(theme))
 
 const GameContainer = () => {
     const classes = useStyle();
-    const {setWords} = useContext(HangManModeContext);
+    const {setWords,words} = useContext(HangManModeContext);
 
 
     useEffect(() => {
@@ -22,13 +22,9 @@ const GameContainer = () => {
     }, []);
 
     const handleKeyPress = (event) => {
-        // setLetterPress(event.key);
-        if (event.key >= 48 && event.key <= 57) {
-            console.log("presionaste un numero");
-        } else{
-            console.log("presionaste una letra");
-      }
+        console.log(words);
     }
+    
 
     return (<div className={classes.gameContainer}>
             <p>Encontra la palabra - Ingresa una letra:</p>

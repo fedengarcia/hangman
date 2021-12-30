@@ -26,7 +26,7 @@ export const HangManContext = (props) => {
     }
 
 
-    return <HangManModeContext.Provider value={{setWords}}>
+    return <HangManModeContext.Provider value={{setWords,words}}>
         {props.children}
     </HangManModeContext.Provider>
 
