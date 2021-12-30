@@ -9,7 +9,7 @@ const WrongWords = ({letters}) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.wrongWordsContainer}>
+        <div className={classes.wrongLettersContainer}>
             <h2>Wrong letters:</h2>
             {/* {letters.map((letter) => <p key={letter.index()}>{`${letter},`}</p>)} */}
         </div>

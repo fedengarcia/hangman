@@ -16,7 +16,9 @@ const GameContainer = () => {
     return (<div className={classes.gameContainer}>
         
             <div >
+                <div>
                 <HangmanContainer/>
+                </div>
                 <WrongLetters/>
             </div>
 
