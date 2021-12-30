@@ -10,6 +10,12 @@ export const HangManContext = (props) => {
 
 
     const checkLetter = (letter) => {
+        // const result = items.filter(id => items.id === id);
+        // if(result === []){
+        //     return false;
+        // }else{
+        //     return true;
+        // }
         if(secretWord.includes(letter)){
             setGuessWord(...guessWord,letter);
             setLetterUsed(...lettersUsed,letter);
