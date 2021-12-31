@@ -30,11 +30,11 @@ const GameContainer = () => {
             <p>Encontra la palabra - Ingresa una letra:</p>
             <input type="text" onKeyDown={handleKeyPress}/>
 
-            <div className={classes.hangAndLettersContainer}>
+            <div className={classes.hangManContainer}>
                 <HangmanContainer/>
             </div>
 
-            {/* <LettersUsed letterPress={letterPress}/> */}
+            <LettersUsed/>
 
             <HiddenWord />
         </div>
