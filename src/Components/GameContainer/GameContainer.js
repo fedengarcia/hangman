@@ -22,14 +22,12 @@ const GameContainer = () => {
        
 
         if(wordNumber <= words.length){
-            console.log(`PALABRA NUMERO ${wordNumber}`);
             setSecretWord(words[wordNumber]);
-            console.log(`PALABRA A ADIVINAR ES ${secretWord}`);
         }
-    }, [wordNumber]);
+    }, [setWords,words,secretWord,setSecretWord,wordNumber]);
 
     const handleKeyPress = (event) => {
-        console.log("PALABRAS---->",words)
+        // console.log("LETRA PRESIONADA---->",event.key);
         console.log(words.length)
         console.log("PALABRA A ADIVINAR ------>", secretWord)
     }
