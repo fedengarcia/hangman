@@ -10,7 +10,7 @@ const LettersUsed = ({letterPress}) => {
 
     return (
         <div className={classes.LettersUsedContainer}>
-            <h2>LETRAS USADAS: ${letterPress}</h2>
+            <h2>{`LETRAS USADAS: ${letterPress}`}</h2>
             {/* {letters.map((letter) => <p key={letter.index()}>{`${letter},`}</p>)} */}
         </div>
     )

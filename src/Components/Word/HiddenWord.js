@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => WordStyles(theme));
 
 const HiddenWord = ({word,showLetter}) => {
     const classes = useStyles();
-    // const [wordSplit,setWord] = useState([]);
 
 
     // useEffect(() => {
