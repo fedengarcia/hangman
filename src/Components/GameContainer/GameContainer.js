@@ -14,15 +14,24 @@ const useStyle = makeStyles((theme) => GameContainerStyle(theme))
 
 const GameContainer = () => {
     const classes = useStyle();
-    const {setWords,words} = useContext(HangManModeContext);
+    const {setWords,words,secretWord,setSecretWord,wordNumber} = useContext(HangManModeContext);
 
 
     useEffect(() => {
-        setWords(data);
-    }, []);
+        setWords(data["data"]);
+       
+
+        if(wordNumber <= words.length){
+            console.log(`PALABRA NUMERO ${wordNumber}`);
+            setSecretWord(words[wordNumber]);
+            console.log(`PALABRA A ADIVINAR ES ${secretWord}`);
+        }
+    }, [wordNumber]);
 
     const handleKeyPress = (event) => {
-        console.log(words);
+        console.log("PALABRAS---->",words)
+        console.log(words.length)
+        console.log("PALABRA A ADIVINAR ------>", secretWord)
     }
     
 
