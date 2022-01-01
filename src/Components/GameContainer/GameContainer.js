@@ -38,7 +38,7 @@ const GameContainer = () => {
                 <HangmanContainer/>
             </div>
 
-            <WrongLetters/>
+            <WrongLetters wrongLetters={wrongLetters}/>
 
             <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters}/>
         </div>

@@ -5,12 +5,13 @@ import {WordStyles} from './WordStyles';
 
 const useStyles = makeStyles((theme) => WordStyles(theme));
 
-const WrongLetters = ({letterPress}) => {
+const WrongLetters = ({wrongLetters}) => {
     const classes = useStyles();
 
     return (
         <div className={classes.WrongLettersContainer}>
-            <h2>{`LETRAS ERRONEAS: ${letterPress}`}</h2>
+            {wrongLetters > 0 && <h2>{`LETRAS ERRONEAS:`}</h2>}
+            {wrongLetters.map((letter,i) => <span key={i}>{letter},</span>)}
         </div>
     )
 }
