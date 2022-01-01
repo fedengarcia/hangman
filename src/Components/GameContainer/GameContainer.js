@@ -1,35 +1,32 @@
-import React,{useState,useEffect,useContext} from 'react';
+import React,{useState,useEffect} from 'react';
 import data from '../../data.json';
 import {makeStyles} from '@material-ui/core';
 import { GameContainerStyle } from './GameContainerStyle';
 import HiddenWord from '../Word/HiddenWord';
-import LettersUsed from '../Word/LettersUsed';
+import WrongLetters from '../Word/WrongLetters';
 import HangmanContainer from '../HangManContainer/HangmanContainer';
-import {HangManModeContext} from '../../Context/HangManContext';
 
 
 const useStyle = makeStyles((theme) => GameContainerStyle(theme))
 
+const words = data["data"]
+const selectedWord = words[Math.floor(Math.random()*words.length)];
 
+console.log(selectedWord)
 
 const GameContainer = () => {
-    const classes = useStyle();
-    const {setWords,words,secretWord,setSecretWord,wordNumber} = useContext(HangManModeContext);
+    const [playable,setPlayable] = useState(true);
+    const [correctLetters,setCorrectLetters] = useState([]);
+    const [wrongLetters,setWrongLetters] = useState([]);
 
+    const classes = useStyle();
 
     useEffect(() => {
-        setWords(data["data"]);
        
-
-        if(wordNumber <= words.length){
-            setSecretWord(words[wordNumber]);
-        }
-    }, [setWords,words,secretWord,setSecretWord,wordNumber]);
+    }, );
 
     const handleKeyPress = (event) => {
-        // console.log("LETRA PRESIONADA---->",event.key);
-        console.log(words.length)
-        console.log("PALABRA A ADIVINAR ------>", secretWord)
+
     }
     
 
@@ -41,9 +38,9 @@ const GameContainer = () => {
                 <HangmanContainer/>
             </div>
 
-            <LettersUsed/>
+            <WrongLetters/>
 
-            <HiddenWord />
+            <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters}/>
         </div>
     )
 }
