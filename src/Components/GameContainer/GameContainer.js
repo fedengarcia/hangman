@@ -22,17 +22,34 @@ const GameContainer = () => {
     const classes = useStyle();
 
     useEffect(() => {
-       
-    }, );
+        const handleKeyPress = (event) => {
+            if(playable && event.keyCode >= 65 && event.keyCode <= 90){
+                const letter = event.key.toLowerCase();
+                if(selectedWord.includes(letter)){
+                    if(!correctLetters.includes(letter)){
+                        setCorrectLetters(currentLetters => [...currentLetters,letter]);
+                    }else{
+                        // showNotifications
+                    }
+                }else{
+                    if(!wrongLetters.includes(letter)){
+                        setWrongLetters(wrongLetters => [...wrongLetters,letter]);
+                    }else{
+                        // showNotifications
+                    }
+                }
+            }
+        }
+        window.addEventListener('keydown', handleKeyPress);
 
-    const handleKeyPress = (event) => {
+        return () => window.removeEventListener('keydown',handleKeyPress);
+    }, [correctLetters,wrongLetters,playable]);
 
-    }
+    
     
 
     return (<div className={classes.gameContainer}>
             <p>Encontra la palabra - Ingresa una letra:</p>
-            <input type="text" onKeyDown={handleKeyPress}/>
 
             <div className={classes.hangManContainer}>
                 <HangmanContainer/>
