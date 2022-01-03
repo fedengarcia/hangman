@@ -53,9 +53,7 @@ const GameContainer = () => {
     return (<div className={classes.gameContainer}>
             <h2>Encontra la palabra - Ingresa una letra:</h2>
 
-            <div className={classes.hangManContainer}>
-                <Figure wrongLetters={wrongLetters}/>
-            </div>
+            <Figure wrongLetters={wrongLetters}/>
 
             <WrongLetters wrongLetters={wrongLetters}/>
 

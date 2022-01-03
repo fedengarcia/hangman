@@ -5,13 +5,5 @@ export const GameContainerStyle = (theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
     },
-    hangManContainer:{
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center',
-        flexDirection:'row',
-        marginBottom: '2em',
-        marginTop: '2em',
 
-    }
 })

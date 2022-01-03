@@ -9,9 +9,7 @@ const Figure = ({wrongLetters}) => {
     const classes = useStyle();
     const errors = wrongLetters.length;
 
-    return (<>
-
-    {/* HANG */}
+    return (
     <div className={classes.hangContainer}>
         <div className={classes.roof}></div>
         <div className={classes.rope}></div>
@@ -28,11 +26,7 @@ const Figure = ({wrongLetters}) => {
                 {errors >= 6 && <div className={classes.leftLeg}></div>}
         </div>
     </div>
-    
-    
-    
-    
-    </>)
+)
 }
 
 export default Figure;
