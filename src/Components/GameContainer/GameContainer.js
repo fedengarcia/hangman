@@ -6,6 +6,7 @@ import HiddenWord from '../Word/HiddenWord';
 import WrongLetters from '../Word/WrongLetters';
 import Figure from '../Figure/Figure';
 import { showNotification as show} from '../../helpers/helpers';
+import Notification from '../Notification/Notification';
 
 
 const useStyle = makeStyles((theme) => GameContainerStyle(theme))
@@ -19,7 +20,7 @@ const GameContainer = () => {
     const [play,setPlay] = useState(true);
     const [correctLetters,setCorrectLetters] = useState([]);
     const [wrongLetters,setWrongLetters] = useState([]);
-    const [showNotifications,setShowNotifications] = useState(false);
+    const [showNotification,setShowNotification] = useState(false);
 
     const classes = useStyle();
 
@@ -31,13 +32,13 @@ const GameContainer = () => {
                     if(!correctLetters.includes(letter)){
                         setCorrectLetters(currentLetters => [...currentLetters,letter]);
                     }else{
-                        show(setShowNotifications);
+                        show(setShowNotification);
                     }
                 }else{
                     if(!wrongLetters.includes(letter)){
                         setWrongLetters(wrongLetters => [...wrongLetters,letter]);
                     }else{
-                        show(setShowNotifications);
+                        show(setShowNotification);
                     }
                 }
             }
@@ -58,6 +59,8 @@ const GameContainer = () => {
             <WrongLetters wrongLetters={wrongLetters}/>
 
             <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters}/>
+
+            <Notification showNotification={showNotification}/>
         </div>
     )
 }

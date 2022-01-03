@@ -5,7 +5,7 @@ import React from 'react';
 
 const useStyles = makeStyles((theme) => NotificationStyle(theme));
 
-const Notification = () => {
+const Notification = ({showNotification}) => {
     const classes = useStyles();
 
     return (
