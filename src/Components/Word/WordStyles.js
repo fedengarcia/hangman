@@ -2,7 +2,7 @@ export const WordStyles = (theme) => ({
     hiddenWordContainer:{
         border:'1px solid red',
         width:'auto',
-        height:'4em',
+        height: 'auto',
     },
     WrongLettersContainer:{
         display:'flex',

@@ -49,7 +49,7 @@ const GameContainer = () => {
     
 
     return (<div className={classes.gameContainer}>
-            <p>Encontra la palabra - Ingresa una letra:</p>
+            <h2>Encontra la palabra - Ingresa una letra:</h2>
 
             <div className={classes.hangManContainer}>
                 <HangmanContainer/>
