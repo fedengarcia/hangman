@@ -6,7 +6,6 @@ export const GameContainerStyle = (theme) => ({
         flexDirection: 'column',
     },
     hangManContainer:{
-        width:'auto',
         display:'flex',
         alignItems:'center',
         justifyContent:'center',

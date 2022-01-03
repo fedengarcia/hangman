@@ -9,8 +9,8 @@ const useStyle = makeStyles((theme)=> HangStyle(theme));
 const Hang = () => {
     const classes = useStyle()
     return(<div className={classes.hangContainer}>
-        <div className={classes.roof}><div></div></div>
-        <div className={classes.rope}><div></div></div>
+        <div className={classes.roof}></div>
+        <div className={classes.rope}></div>
         <div className={classes.mast}></div>
         <div className={classes.floor}></div>
     </div>)

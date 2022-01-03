@@ -5,7 +5,7 @@ import Hang from '../Hang/Hang';
 
 
 
-const HangmanContainer = () => {
+const HangmanContainer = ({bodyPart}) => {
 
     return(<>
         <Hang/>
