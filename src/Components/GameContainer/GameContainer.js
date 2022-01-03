@@ -4,7 +4,8 @@ import {makeStyles} from '@material-ui/core';
 import { GameContainerStyle } from './GameContainerStyle';
 import HiddenWord from '../Word/HiddenWord';
 import WrongLetters from '../Word/WrongLetters';
-import HangmanContainer from '../HangManContainer/HangmanContainer';
+import Figure from '../Figure/Figure';
+import { showNotification as show} from '../../helpers/helpers';
 
 
 const useStyle = makeStyles((theme) => GameContainerStyle(theme))
@@ -15,27 +16,28 @@ const selectedWord = words[Math.floor(Math.random()*words.length)];
 console.log(selectedWord)
 
 const GameContainer = () => {
-    const [playable,setPlayable] = useState(true);
+    const [play,setPlay] = useState(true);
     const [correctLetters,setCorrectLetters] = useState([]);
     const [wrongLetters,setWrongLetters] = useState([]);
+    const [showNotifications,setShowNotifications] = useState(false);
 
     const classes = useStyle();
 
     useEffect(() => {
         const handleKeyPress = (event) => {
-            if(playable && event.keyCode >= 65 && event.keyCode <= 90){
+            if(play && event.keyCode >= 65 && event.keyCode <= 90){
                 const letter = event.key.toLowerCase();
                 if(selectedWord.includes(letter)){
                     if(!correctLetters.includes(letter)){
                         setCorrectLetters(currentLetters => [...currentLetters,letter]);
                     }else{
-                        // showNotifications
+                        show(setShowNotifications);
                     }
                 }else{
                     if(!wrongLetters.includes(letter)){
                         setWrongLetters(wrongLetters => [...wrongLetters,letter]);
                     }else{
-                        // showNotifications
+                        show(setShowNotifications);
                     }
                 }
             }
@@ -43,7 +45,7 @@ const GameContainer = () => {
         window.addEventListener('keydown', handleKeyPress);
 
         return () => window.removeEventListener('keydown',handleKeyPress);
-    }, [correctLetters,wrongLetters,playable]);
+    }, [correctLetters,wrongLetters,play]);
 
     
     
@@ -52,7 +54,7 @@ const GameContainer = () => {
             <h2>Encontra la palabra - Ingresa una letra:</h2>
 
             <div className={classes.hangManContainer}>
-                <HangmanContainer/>
+                <Figure wrongLetters={wrongLetters}/>
             </div>
 
             <WrongLetters wrongLetters={wrongLetters}/>

@@ -1,26 +1,21 @@
 export const FigureStyle = (theme) => ({
     figureContainer:{
-        width:'50px',
-        height:'50px',
+        width:'auto',
+        height:'auto',
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
         flexDirection:'column',
-        backgroundColor: 'grey',
-
     },
     head:{
-        width:'auto',
-        height:'auto',
+        width:'3em',
+        height:'3em',
         position:'absolute',
         left:'41.5%',
         top:'12em',
         border:'0.2em solid black',
         borderRadius:'50%',
-        "& > div":{
-            width:'3em',
-            height:'3em',
-        }
+ 
     },
     body:{
         position:'absolute',
@@ -66,5 +61,37 @@ export const FigureStyle = (theme) => ({
         backgroundColor:'black',
         transform: 'rotate(40deg)'
     },
+    hangContainer:{
+        width:'2em',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        flexDirection:'column',
+    },
+    floor:{
+        width: '6em',
+        height: '0.2em',
+        backgroundColor:'black',
+    },
+    mast:{
+        width:'0.2em',
+        height:'15em',
+        backgroundColor:'black',
+    },
+    roof:{
+        position:'relative',
+        left:'2.9em',
+        width: '6em',
+        height: '0.2em',
+        backgroundColor:'black',
+    },
+    rope:{
+        position:'absolute',
+        left:'52.2em',
+        top:'14.2em',
+        width: '0.2em',
+        height: '1em',
+        backgroundColor:'black',
+    }
 
 })
