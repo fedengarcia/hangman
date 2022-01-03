@@ -10,7 +10,7 @@ const Notification = ({showNotification}) => {
 
     return (
         <div className={classes.notificationContainer}>
-            <p>Ya ingresaste esa letra</p>
+            {showNotification && <p>Ya ingresaste esa letra</p>}
         </div>
     )
 }

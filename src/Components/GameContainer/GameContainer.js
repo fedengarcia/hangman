@@ -51,7 +51,7 @@ const GameContainer = () => {
     
     
 
-    return (<div className={classes.gameContainer}>
+    return (<>    <div className={classes.gameContainer}>
             <h2>Encontra la palabra - Ingresa una letra:</h2>
 
             <Figure wrongLetters={wrongLetters}/>
@@ -59,10 +59,10 @@ const GameContainer = () => {
             <WrongLetters wrongLetters={wrongLetters}/>
 
             <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters}/>
-
-            <Notification showNotification={showNotification}/>
         </div>
-    )
+        <Notification showNotification={showNotification}/>
+        </>
+)
 }
 
 
