@@ -10,12 +10,14 @@ const Figure = ({wrongLetters}) => {
     const errors = wrongLetters.length;
 
     return (
+    
     <div className={classes.hangContainer}>
-        <div className={classes.roof}></div>
-        <div className={classes.rope}></div>
-        <div className={classes.mast}></div>
-        <div className={classes.floor}></div>
-
+        <div className={classes.mastContainer}>
+            <div className={classes.rope}></div>
+            <div className={classes.roof}></div>
+            <div className={classes.mast}></div>
+            <div className={classes.floor}></div>
+        </div>
         {/* FIGURE */}
         <div className={classes.figureContainer}>
                 {errors >= 1 && <div className={classes.head}></div>}
