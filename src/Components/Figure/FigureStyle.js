@@ -32,14 +32,10 @@ export const FigureStyle = (theme) => ({
     head:{
         width:'3em',
         height:'3em',
-        // left:'41.5%',
-        // top:'12em',
         border:'0.2em solid black',
         borderRadius:'50%',
     },
     body:{
-        // left:'45.2%',
-        // top:'15.2em',
         width:'0.2em',
         height:'5em',
         backgroundColor:'black',
