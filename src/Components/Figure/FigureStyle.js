@@ -8,26 +8,25 @@ export const FigureStyle = (theme) => ({
         flexDirection:'row',
     },
     figureContainer:{
-        width:'100%',
-        height:'auto',
-        position: 'relative',
+        width:'25%',
+        height:'25%',
+        margin: '-0.2em -10.6em 1em 1em',
+        position: 'absolute',
         display: 'flex',
-        justifyContent:'center',
+        justifyContent:'flex-start',
         alignItems:'center',
         alignContent: 'center',
-        margin: '0',
-        border: '3px solid black',
-        zIndex: '1',
         flexDirection: 'column',
+        zIndex: '1',
     },
     mastContainer:{
         width:'100%',
         display: 'flex',
-        postion:'relative',
         justifyContent:'center',
         alignItems:'center',
+        alignContent: 'center',
         flexDirection:'column',
-        zIndex: '-3',
+        zIndex: '0',
     },
     head:{
         width:'3em',
@@ -76,6 +75,7 @@ export const FigureStyle = (theme) => ({
         backgroundColor:'black',
     },
     mast:{
+        zIndex: '0',
         width:'0.2em',
         height:'15em',
         backgroundColor:'black',
@@ -89,11 +89,11 @@ export const FigureStyle = (theme) => ({
     },
     rope:{
         position:'absolute',
-        top: '12.2em',
-        left: '53.5em',
+        margin: '-14em -11.6em 0em 0em',
         width: '0.2em',
         height: '1em',
         backgroundColor:'black',
+        zIndex: '1'
     }
 
 })

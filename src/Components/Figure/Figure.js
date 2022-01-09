@@ -13,8 +13,8 @@ const Figure = ({wrongLetters}) => {
     
     <div className={classes.hangContainer}>
         <div className={classes.mastContainer}>
-            <div className={classes.rope}></div>
             <div className={classes.roof}></div>
+            <div className={classes.rope}></div>
             <div className={classes.mast}></div>
             <div className={classes.floor}></div>
         </div>
