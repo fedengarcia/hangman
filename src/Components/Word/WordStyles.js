@@ -1,14 +1,12 @@
 export const WordStyles = (theme) => ({
     hiddenWordContainer:{
-        border:'1px solid red',
         width:'auto',
         height: 'auto',
     },
     WrongLettersContainer:{
         display:'flex',
-        justifyContent:'space-around',
+        justifyContent:'center',
         alignItems:'center',
-        marginLeft:'3em',
     },
     letter:{
         borderBottom: '3px solid black',

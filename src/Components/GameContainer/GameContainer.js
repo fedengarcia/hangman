@@ -55,10 +55,11 @@ const GameContainer = () => {
     <div className={classes.gameContainer}>
             <h2>Encontra la palabra - Ingresa una letra:</h2>
 
-            <Figure wrongLetters={wrongLetters}/>
+            <div className={classes.figureWrongContainer}>
+                <Figure wrongLetters={wrongLetters}/>
 
-            <WrongLetters wrongLetters={wrongLetters}/>
-
+                <WrongLetters wrongLetters={wrongLetters}/>    
+            </div>
             <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters}/>
 
             <Notification showNotification={showNotification}/>

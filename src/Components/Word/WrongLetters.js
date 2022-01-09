@@ -10,7 +10,7 @@ const WrongLetters = ({wrongLetters}) => {
 
     return (
         <div className={classes.WrongLettersContainer}>
-            {wrongLetters > 0 && <h2>LETRAS ERRONEAS:</h2>}
+            <h4>{`LETRAS ERRONEAS:  `}</h4>
             {wrongLetters.map((letter,i) => <span key={i}>{letter},</span>)}
         </div>
     )

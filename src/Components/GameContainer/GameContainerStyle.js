@@ -5,5 +5,12 @@ export const GameContainerStyle = (theme) => ({
         alignItems: 'center',
         flexDirection: 'column',
     },
-
+    figureWrongContainer:{
+        display:'flex',
+        justifyContent:'center',
+        flexDirection:'row',
+        alignItems: 'center',
+        margin: '2em',
+        flexWrap: 'wrap',
+    }    
 })

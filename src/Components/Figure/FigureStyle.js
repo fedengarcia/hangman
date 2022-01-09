@@ -1,6 +1,6 @@
 export const FigureStyle = (theme) => ({
     hangContainer:{
-        width:'100%',
+        width:'50%',
         height: 'auto',
         display: 'flex',
         justifyContent:'center',

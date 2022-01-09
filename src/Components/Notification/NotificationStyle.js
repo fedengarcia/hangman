@@ -4,8 +4,8 @@ export const NotificationStyle = (theme) => ({
         borderRadius: '10px 10px 0 0',
         bottom: '-50px',
         position:'absolute',
-        // transition:' transform 0.3s ease-in-out',
-        // transform: 'translateY(-50px)',
+        transition:' transform 0.3s ease-in-out',
+        transform: 'translateY(-50px)',
         width: 'auto',
         height: 'auto',
         '& > p':{
