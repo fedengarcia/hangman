@@ -15,14 +15,14 @@ export default function DialogContainer ({setPlay, gameResult}) {
             setOpenWinPopUp(true);
             setPlay(false);
         }
-    }, [gameResult]);
+    }, [setPlay,gameResult]);
 
 
     
     return <>
 
-        {openLoosePopUp && LoosePopUp()}
-        {openWinPopUp && WinPopUp()}
+        {openLoosePopUp && LoosePopUp({setPlay})}
+        {openWinPopUp && WinPopUp({setPlay})}
 
     </>
 
