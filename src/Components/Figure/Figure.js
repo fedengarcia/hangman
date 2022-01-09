@@ -1,13 +1,19 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { makeStyles } from '@material-ui/core';
 import {FigureStyle} from './FigureStyle';
 
 
 const useStyle = makeStyles((theme)=> FigureStyle(theme));
 
-const Figure = ({wrongLetters}) => {
+const Figure = ({wrongLetters, setPlay}) => {
     const classes = useStyle();
     const errors = wrongLetters.length;
+
+    useEffect(() => {
+        if(errors === 6){
+            setPlay(false);
+        }
+    }, [errors,setPlay]);
 
     return (
     

@@ -56,7 +56,7 @@ const GameContainer = () => {
             <h2>Encontra la palabra - Ingresa una letra:</h2>
 
             <div className={classes.figureWrongContainer}>
-                <Figure wrongLetters={wrongLetters}/>
+                <Figure wrongLetters={wrongLetters} setPlay={setPlay}/>
 
                 <WrongLetters wrongLetters={wrongLetters}/>    
             </div>
