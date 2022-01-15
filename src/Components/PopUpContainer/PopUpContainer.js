@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
-
+import WinPopUp from '../PopUpComponent/WinPopUp';
+import LoosePopUp from '../PopUpComponent/LoosePopUp';
 
 export default function DialogContainer ({setPlay, gameResult}) { 
     const [openLoosePopUp, setOpenLoosePopUp] = useState(false);
@@ -21,8 +22,8 @@ export default function DialogContainer ({setPlay, gameResult}) {
     
     return <>
 
-        {openLoosePopUp && LoosePopUp({setPlay})}
-        {openWinPopUp && WinPopUp({setPlay})}
+        {openLoosePopUp && LoosePopUp({openLoosePopUp,setOpenLoosePopUp})}
+        {openWinPopUp && WinPopUp({openWinPopUp,setOpenWinPopUp})}
 
     </>
 
