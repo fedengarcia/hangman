@@ -22,8 +22,8 @@ export default function DialogContainer ({setPlay, gameResult}) {
     
     return <>
 
-        {openLoosePopUp && LoosePopUp({openLoosePopUp,setOpenLoosePopUp})}
-        {openWinPopUp && WinPopUp({openWinPopUp,setOpenWinPopUp})}
+        {openLoosePopUp && LoosePopUp({openLoosePopUp,setOpenLoosePopUp,setPlay})}
+        {openWinPopUp && WinPopUp({openWinPopUp,setOpenWinPopUp,setPlay})}
 
     </>
 

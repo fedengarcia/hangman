@@ -1,7 +1,7 @@
 import React from 'react';
 import PopUpComponent from './PopUpComponent';
 
-const WinPopUp = ({openWinPopUp,setOpenWinPopUp}) => {
+const WinPopUp = ({openWinPopUp,setOpenWinPopUp,setPlay}) => {
 
 
 
@@ -11,6 +11,7 @@ const WinPopUp = ({openWinPopUp,setOpenWinPopUp}) => {
         openDialog={setOpenWinPopUp}
         closeDialog={() => setOpenWinPopUp(false)}
         handleConfirm={() => setOpenWinPopUp(false)}
+        setPlay={() => setPlay(true)}
         title='VICTORIA'
         firstButton='VOLVER AL INICIO'
         secondButton='JUGAR DE NUEVO'

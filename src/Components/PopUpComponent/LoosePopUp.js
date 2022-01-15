@@ -2,7 +2,7 @@ import React from 'react';
 import PopUpComponent from './PopUpComponent';
 
 
-const LoosePopUp = ({openLoosePopUp,setOpenLoosePopUp}) => {
+const LoosePopUp = ({openLoosePopUp,setOpenLoosePopUp,setPlay}) => {
 
 
     return(<PopUpComponent
@@ -10,6 +10,7 @@ const LoosePopUp = ({openLoosePopUp,setOpenLoosePopUp}) => {
         openDialog={setOpenLoosePopUp}
         closeDialog={() => setOpenLoosePopUp(false)}
         handleConfirm={() => setOpenLoosePopUp(false)}
+        setPlay={() => setPlay(true)}
         title='PERDISTE'
         firstButton='VOLVER AL INICIO'
         secondButton='JUGAR DE NUEVO'

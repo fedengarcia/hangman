@@ -6,7 +6,7 @@ import { Children } from 'react';
 
 export default function PopUpComponent (props) {
 
-    const {title,open,firstButton,secondButton,openDialog,closeDialog,handlePlayAgain} = props;
+    const {title,open,firstButton,secondButton,openDialog,closeDialog,setPlay} = props;
 
     const handleClose = () => {
         if(closeDialog){
@@ -16,8 +16,8 @@ export default function PopUpComponent (props) {
     }
 
     const handleAccept = () => {
-        if(handlePlayAgain){
-            handlePlayAgain();
+        if(setPlay){
+            setPlay();
         }
     }
 
