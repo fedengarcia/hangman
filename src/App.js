@@ -1,14 +1,12 @@
 
 import './App.css';
-import GameContainer from './Components/GameContainer/GameContainer';
-import Header from './Components/Header/Header';
-
+import Router from './Components/Router/Router'
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <GameContainer/>
+      <Router/>
+
     </div>
   );
 }

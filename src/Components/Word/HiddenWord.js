@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => WordStyles(theme));
 const HiddenWord = ({selectedWord,correctLetters}) => {
     const classes = useStyles();
 
+
     return (
         <div className={classes.hiddenWordContainer}>
             
