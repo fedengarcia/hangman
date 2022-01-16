@@ -60,7 +60,7 @@ const GameContainer = () => {
         //CHECK IF WIN OR LOSE
         if(wrongLetters.length === 6){
             setPlay(false);
-            history.push('/popUp/losePopUp');
+            history.push('/dialog/loseDialog');
         }
 
 
