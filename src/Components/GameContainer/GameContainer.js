@@ -30,15 +30,9 @@ const GameContainer = () => {
 
     useEffect(() => {
         const handleWinPopUp = () => {
-            history.push('/PopUpContainer/WinPopUp');
-        }
-    
-        const handleLoosePopUp = () => {
-            history.push('/PopUpContainer/LoosePopUp');
+            history.push('/popUp/winPopUp');
         }
 
-        
-    
         const handleKeyPress = (event) => {
             if(play && event.keyCode >= 65 && event.keyCode <= 90){
                 const letter = event.key.toLowerCase();
@@ -47,7 +41,6 @@ const GameContainer = () => {
                         setCorrectLetters(currentLetters => [...currentLetters,letter]);
                         console.log("LONGITUD",correctLetters,selectedWord)
                         
-
                         if(selectedWord.lenght === correctLetters.length){
                             handleWinPopUp();
                         }
@@ -57,20 +50,22 @@ const GameContainer = () => {
                 }else{
                     if(!wrongLetters.includes(letter)){
                         setWrongLetters(wrongLetters => [...wrongLetters,letter]);
-                        if(wrongLetters.length === selectedWord.length){
-                            handleLoosePopUp();
-                        }
                     }else{
                         show(setShowNotification);
                     }
                 }
-            }else{
-                handleWinPopUp();
-                handleLoosePopUp();
             }
         }
-        window.addEventListener('keydown', handleKeyPress);
 
+        //CHECK IF WIN OR LOSE
+        if(wrongLetters.length === 6){
+            setPlay(false);
+            history.push('/popUp/losePopUp');
+        }
+
+
+
+        window.addEventListener('keydown', handleKeyPress);
         return () => window.removeEventListener('keydown',handleKeyPress);
     }, [correctLetters,wrongLetters,play,history]);
 

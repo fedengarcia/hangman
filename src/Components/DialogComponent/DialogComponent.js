@@ -2,23 +2,24 @@ import React from 'react';
 import { Dialog,DialogContent,DialogTitle,DialogActions } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import { Children } from 'react';
+import {useHistory} from 'react-router-dom';
 
 
-export default function PopUpComponent (props) {
 
-    const {title,open,firstButton,secondButton,openDialog,closeDialog,setPlay} = props;
+export default function DialogComponent (props) {
+    const history = useHistory();
+    const {title,open,firstButton,secondButton,openDialog,closeDialog} = props;
 
     const handleClose = () => {
         if(closeDialog){
             closeDialog();
         }
         openDialog(false);
+        history.push('/');
     }
 
     const handleAccept = () => {
-        if(setPlay){
-            setPlay();
-        }
+        history.push('/');
     }
 
     return <Dialog open={open} onClose={handleClose}>

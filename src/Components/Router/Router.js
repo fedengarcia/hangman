@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
-import PopUpContainer from '../PopUpContainer/PopUpContainer'
+import DialogContainer from '../DialogContainer/DialogContainer'
 import GameContainer from '../GameContainer/GameContainer';
 
 
@@ -14,8 +14,8 @@ const Router = () => {
                 <GameContainer/>
             </Route>
 
-            <Route path='popUpContainer/:dialogType'>
-                <PopUpContainer/>
+            <Route path='dialog/:dialogType'>
+                <DialogContainer/>
             </Route>
         </Switch>
         </BrowserRouter>
