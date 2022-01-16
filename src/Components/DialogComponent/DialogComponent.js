@@ -28,8 +28,8 @@ export default function DialogComponent (props) {
             {Children}
         </DialogContent>
         <DialogActions style={{display:'flex', justifyContent:'center'}}>
-            {firstButton && <Button onClicl={handleClose} color='primary'>{firstButton}</Button>}
-            {secondButton && <Button onClicl={handleAccept} color='primary'>{secondButton}</Button>}
+            {firstButton && <Button onClick={handleClose} color='primary'>{firstButton}</Button>}
+            {secondButton && <Button onClick={handleAccept} color='primary'>{secondButton}</Button>}
         </DialogActions>
 
 

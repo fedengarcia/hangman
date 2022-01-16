@@ -6,8 +6,11 @@ import HiddenWord from '../Word/HiddenWord';
 import WrongLetters from '../Word/WrongLetters';
 import Figure from '../Figure/Figure';
 import { showNotification as show} from '../../helpers/helpers';
+import { checkWin } from '../../helpers/helpers';
 import Notification from '../Notification/Notification';
 import {useHistory} from 'react-router-dom';
+import PopUp from '../PopUp/PopUp';
+
 
 const useStyle = makeStyles((theme) => GameContainerStyle(theme))
 
@@ -29,21 +32,14 @@ const GameContainer = () => {
     
 
     useEffect(() => {
-        const handleWinPopUp = () => {
-            history.push('/popUp/winPopUp');
-        }
+
 
         const handleKeyPress = (event) => {
             if(play && event.keyCode >= 65 && event.keyCode <= 90){
                 const letter = event.key.toLowerCase();
                 if(selectedWord.includes(letter)){
                     if(!correctLetters.includes(letter)){
-                        setCorrectLetters(currentLetters => [...currentLetters,letter]);
-                        console.log("LONGITUD",correctLetters,selectedWord)
-                        
-                        if(selectedWord.lenght === correctLetters.length){
-                            handleWinPopUp();
-                        }
+                        setCorrectLetters(currentLetters => [...currentLetters,letter]);                    
                     }else{
                         show(setShowNotification);
                     }
@@ -55,18 +51,22 @@ const GameContainer = () => {
                     }
                 }
             }
+           
         }
-
-        //CHECK IF WIN OR LOSE
-        if(wrongLetters.length === 6){
+        if(checkWin(correctLetters,wrongLetters,selectedWord) === 'win'){
+            setPlay(false);
+            history.push('/dialog/winDialog');
+        }else if (checkWin(correctLetters,wrongLetters,selectedWord) === 'lose') {
             setPlay(false);
             history.push('/dialog/loseDialog');
+        }else {
+            window.addEventListener('keydown', handleKeyPress);
+            return () => window.removeEventListener('keydown',handleKeyPress);
         }
 
 
-
-        window.addEventListener('keydown', handleKeyPress);
-        return () => window.removeEventListener('keydown',handleKeyPress);
+        
+        
     }, [correctLetters,wrongLetters,play,history]);
 
     
@@ -82,6 +82,8 @@ const GameContainer = () => {
                 <WrongLetters wrongLetters={wrongLetters}/>    
             </div>
             <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters} setCorrectLetters={setCorrectLetters}/>
+
+            {/* <PopUp selectedWord={selectedWord} correctLetters={correctLetters} wrongLetters={wrongLetters} setPlay={setPlay}/> */}
 
             <Notification showNotification={showNotification}/>
     </div>)

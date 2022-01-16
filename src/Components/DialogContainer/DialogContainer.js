@@ -15,7 +15,6 @@ export default function PopUpContainer  ()  {
                 setOpenWinDialog(true);
             }
             if(dialogType === "loseDialog"){
-                console.log("LOSE DIALOG ON --> SE DEBE MOSTRAR EN PANTALLA")
                 setOpenLoseDialog(true);
             }
             
