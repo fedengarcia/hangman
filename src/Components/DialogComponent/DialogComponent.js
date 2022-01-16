@@ -1,14 +1,13 @@
 import React from 'react';
 import { Dialog,DialogContent,DialogTitle,DialogActions } from '@material-ui/core';
 import { Button } from '@material-ui/core';
-import { Children } from 'react';
 import {useHistory} from 'react-router-dom';
 
 
 
 export default function DialogComponent (props) {
     const history = useHistory();
-    const {title,open,firstButton,secondButton,openDialog,closeDialog} = props;
+    const {title,open,firstButton,secondButton,children,openDialog,closeDialog} = props;
 
     const handleClose = () => {
         if(closeDialog){
@@ -25,7 +24,7 @@ export default function DialogComponent (props) {
     return <Dialog open={open} onClose={handleClose}>
         <DialogTitle>{title}</DialogTitle>
         <DialogContent>
-            {Children}
+            {children}
         </DialogContent>
         <DialogActions style={{display:'flex', justifyContent:'center'}}>
             {firstButton && <Button onClick={handleClose} color='primary'>{firstButton}</Button>}

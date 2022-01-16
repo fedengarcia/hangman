@@ -9,8 +9,6 @@ import { showNotification as show} from '../../helpers/helpers';
 import { checkWin } from '../../helpers/helpers';
 import Notification from '../Notification/Notification';
 import {useHistory} from 'react-router-dom';
-import PopUp from '../PopUp/PopUp';
-
 
 const useStyle = makeStyles((theme) => GameContainerStyle(theme))
 
@@ -82,8 +80,6 @@ const GameContainer = () => {
                 <WrongLetters wrongLetters={wrongLetters}/>    
             </div>
             <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters} setCorrectLetters={setCorrectLetters}/>
-
-            {/* <PopUp selectedWord={selectedWord} correctLetters={correctLetters} wrongLetters={wrongLetters} setPlay={setPlay}/> */}
 
             <Notification showNotification={showNotification}/>
     </div>)
