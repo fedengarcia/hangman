@@ -1,6 +1,6 @@
 export const NotificationStyle = (theme) => ({
     notificationContainer: {
-        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#CA8B41',
         borderRadius: '10px 10px 0 0',
         bottom: '-50px',
         position:'absolute',
@@ -9,9 +9,10 @@ export const NotificationStyle = (theme) => ({
         width: 'auto',
         height: 'auto',
         '& > p':{
-            fontSize: '2em',
-            color: 'red',
+            fontSize: '2.5em',
+            color: 'white',
             margin: '0',
+            padding: '0.08em',
         },
     }
 
