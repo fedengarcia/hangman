@@ -4,15 +4,14 @@ export const HeaderStyle = (theme) => ({
         display: 'flex',
         justifyContent: 'center',
         aligItems: 'center',
-        flexDirection: 'column',
+        flexDirection: 'row',
+        backgroundColor: '#F1C35C',
 
-        '& > h1, p':{
-            fontFamily: 'Arimo, sans-serif'
-        },
         
         '& > h1':{
-            fontSize: '3em',
+            fontSize: '2em',
             textShadow: '3px 3px 7px #1519BC',
+            fontFamily: 'Arimo, sans-serif'
         }
     },
 });

@@ -4,6 +4,10 @@ export const GameContainerStyle = (theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
+        backgroundColor: '#F1C35C',
+        height: '100%',
+        margin: 0,
+        padding: 0,
     },
     figureWrongContainer:{
         display:'flex',
@@ -12,5 +16,15 @@ export const GameContainerStyle = (theme) => ({
         alignItems: 'center',
         margin: '2em',
         flexWrap: 'wrap',
-    }    
+        padding: '3em',
+    },
+    notificationContainer:{
+        width:'100%',
+        height: '4.5em',
+        backgroundColor: '#F1C35C',
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+
+    }
 })

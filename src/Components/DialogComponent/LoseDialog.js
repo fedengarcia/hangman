@@ -14,7 +14,7 @@ const LoseDialog = ({openLoseDialog,setOpenLoseDialog}) => {
         firstButton='VOLVER AL INICIO'
         secondButton='JUGAR DE NUEVO'
     >
-    PERDISTE
+    No fuiste capaz de adivinar la palabra.
     </DialogComponent>)
 }
 

@@ -3,13 +3,13 @@ import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import DialogContainer from '../DialogContainer/DialogContainer';
 import GameContainer from '../GameContainer/GameContainer';
 
-
 const Router = () => {
 
 
     return(
         <BrowserRouter>
         <Switch>
+            
             <Route exact path="/">
                 <GameContainer/>
             </Route>
