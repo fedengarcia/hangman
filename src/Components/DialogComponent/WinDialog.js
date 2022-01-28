@@ -12,11 +12,11 @@ const WinDialog = ({openWinDialog,setOpenWinDialog}) => {
         closeDialog={() => setOpenWinDialog(false)}
         handleConfirm={() => setOpenWinDialog(false)}
 
-        title='VICTORIA'
+        title='GANASTE!'
         firstButton='VOLVER AL INICIO'
         secondButton='JUGAR DE NUEVO'
     >
-    GANASTE
+    Quieres volver a intentarlo ?
     </DialogComponent>)
 }
 

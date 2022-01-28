@@ -1,4 +1,4 @@
-export const FigureStyle = (theme) => ({
+export const HangManFigureStyle = (theme) => ({
     hangContainer:{
         width:'50%',
         height: 'auto',
@@ -6,6 +6,7 @@ export const FigureStyle = (theme) => ({
         justifyContent:'center',
         alignItems:'center',
         flexDirection:'row',
+        marginBottom: '2em',
     },
     figureContainer:{
         width:'25%',

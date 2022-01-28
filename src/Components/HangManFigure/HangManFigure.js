@@ -1,11 +1,11 @@
 import React,{useEffect} from 'react';
 import { makeStyles } from '@material-ui/core';
-import {FigureStyle} from './FigureStyle';
+import {HangManFigureStyle} from './HangManFigureStyle';
 
 
-const useStyle = makeStyles((theme)=> FigureStyle(theme));
+const useStyle = makeStyles((theme)=> HangManFigureStyle(theme));
 
-const Figure = ({wrongLetters, setPlay}) => {
+const HangManFigure = ({wrongLetters, setPlay}) => {
     const classes = useStyle();
     const errors = wrongLetters.length;
 
@@ -37,4 +37,4 @@ const Figure = ({wrongLetters, setPlay}) => {
 )
 }
 
-export default Figure;
+export default HangManFigure;

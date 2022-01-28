@@ -1,11 +1,11 @@
 import { makeStyles } from '@material-ui/core';
-import { NotificationStyle } from './NotificationStyle';
+import { HangManNotificationStyle } from './HangManNotificationStyle';
 import React from 'react';
 
 
-const useStyles = makeStyles((theme) => NotificationStyle(theme));
+const useStyles = makeStyles((theme) => HangManNotificationStyle(theme));
 
-const Notification = ({showNotification}) => {
+const HangManNotification = ({showNotification}) => {
     const classes = useStyles();
 
     return (
@@ -17,4 +17,4 @@ const Notification = ({showNotification}) => {
 
 
 
-export default Notification;
+export default HangManNotification;

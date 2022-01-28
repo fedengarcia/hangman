@@ -1,30 +1,33 @@
 export const GameContainerStyle = (theme) => ({
     gameContainer:{
+        height: '100vh',
+        width: '100%',
         display:'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        backgroundColor: '#F1C35C',
-        height: '100%',
-        margin: 0,
-        padding: 0,
-    },
-    figureWrongContainer:{
-        display:'flex',
-        justifyContent:'center',
-        flexDirection:'row',
-        alignItems: 'center',
-        margin: '2em',
-        flexWrap: 'wrap',
-        padding: '3em',
-    },
-    notificationContainer:{
-        width:'100%',
-        height: '4.5em',
-        backgroundColor: '#F1C35C',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
 
-    }
-})
+    },
+    games:{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        border: '1px solid black',
+        borderRadius: '1em',
+        '& > h1':{
+            padding: '2em 4em',
+        }
+    },
+    button:{
+        margin: '0 2em 2em 2em',
+        width: '10em',
+        '&:hover':{
+            color:'red',
+            opacity: '0.9',
+        }
+    },
+    linkStyle:{
+        textDecoration: "none",
+      },
+});
