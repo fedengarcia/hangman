@@ -9,7 +9,7 @@ import { showNotification as show} from '../../helpers/helpers';
 import { checkWin } from '../../helpers/helpers';
 import HangManNotification from '../HangManNotification/HangManNotification';
 import {useHistory} from 'react-router-dom';
-import Header from '../Header/Header';
+import HangManHeader from '../Header/HangManHeader';
 
 const useStyle = makeStyles((theme) => HangManGameContainerStyle(theme))
 
@@ -70,7 +70,7 @@ const HangManGameContainer = () => {
     
 
     return (  <>
-        <Header/>
+        <HangManHeader/>
 
     <div className={classes.gameContainer}>
             <h2>Adivina la palabra - Ingresa una letra</h2>

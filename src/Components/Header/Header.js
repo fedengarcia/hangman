@@ -4,13 +4,13 @@ import { HeaderStyle } from './HeaderStyle';
 
 const useStyle = makeStyles((theme) => HeaderStyle(theme))
 
-const Header = () => {
+export default function Header ({gameTitle}) {
     const classes = useStyle();
 
-    return (<header className={classes.headerContainer}>
-        <h1>HANG MAN</h1>
+    return (
+    <header className={classes.headerContainer}>
+        <h1>{gameTitle}</h1>
     </header>)
 }
 
 
-export default Header;

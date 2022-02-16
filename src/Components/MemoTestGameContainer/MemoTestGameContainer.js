@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import { MemoTestGameContainerStyle } from './MemoTestGameContainerStyle';
 import MemoTestList from '../MemotestList/MemoTestList';
 import axios from 'axios'
+import MemoTestHeader from '../Header/MemoTestHeader';
 
 const useStyles = makeStyles((theme) => MemoTestGameContainerStyle(theme));
 
@@ -19,9 +20,13 @@ const MemoTestGameContainer = () => {
         })
     }, []);
 
-    return(<div className={classes.gameContanier}>
+    return(
+    <>
+    <MemoTestHeader/>
+    <div className={classes.gameContanier}>
         <MemoTestList items={items}/>
-    </div>)
+    </div>
+    </>)
 }
 
 export default MemoTestGameContainer;
