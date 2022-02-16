@@ -17,5 +17,24 @@ export const HeaderStyle = (theme) => ({
     },
     arrowBackIconContainer:{
         display: 'flex',
+        position: 'absolute',
+        left: '2em',
+        width: 'auto'
+    },
+    arrowBackIcon:{
+        borderRadius: '10em',
+        border: '1px solid black',
+        boxShadow: '1px 2px black',
+        '&:hover':{
+            transition: '0.1s ease',
+            cursor:'pointer',
+        },
+        '&:active':{
+            boxShadow: '0 0.5px black',
+            transform: 'translateY(4px)',
+        },
     }
+
+
+      
 });

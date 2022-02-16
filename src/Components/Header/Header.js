@@ -12,7 +12,7 @@ export default function Header ({gameTitle}) {
     return (
     <header className={classes.headerContainer}>
         <div className={classes.arrowBackIconContainer}>
-        <ArrowBackIcon fontSize='large' className={classes.arrowBackIcon} />
+            <ArrowBackIcon sx={{ fontSize: 50 }} className={classes.arrowBackIcon}/>
         </div>
         <h1>{gameTitle}</h1>
     </header>)
