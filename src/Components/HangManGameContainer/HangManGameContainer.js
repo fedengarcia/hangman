@@ -70,9 +70,10 @@ const HangManGameContainer = () => {
     
 
     return (  <>
-        <HangManHeader/>
 
     <div className={classes.gameContainer}>
+    <HangManHeader/>
+
             <h2>Adivina la palabra - Ingresa una letra</h2>
 
             <div className={classes.figureWrongContainer}>

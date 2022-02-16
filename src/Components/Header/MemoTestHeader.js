@@ -4,7 +4,7 @@ import Header from './Header';
 const MemoTestHeader = () => {
 
     return (
-        <Header gameTitle={'MemoTest'} />
+        <Header gameTitle={'MemoTest'}/>
     )
 }
 

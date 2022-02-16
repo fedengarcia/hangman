@@ -29,7 +29,7 @@ export default function DialogComponent (props) {
     }
 
     const handleAccept = () => {
-        navigate('/');
+        navigate('/hangMan');
     }
 
     return <Dialog 

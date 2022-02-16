@@ -1,7 +1,6 @@
 export const HangManGameContainerStyle = (theme) => ({
     gameContainer:{
         display:'flex',
-        justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
         backgroundColor: '#F1C35C',
@@ -14,7 +13,6 @@ export const HangManGameContainerStyle = (theme) => ({
         justifyContent:'center',
         flexDirection:'row',
         alignItems: 'center',
-        margin: '2em',
         flexWrap: 'wrap',
         padding: '3em',
     },
