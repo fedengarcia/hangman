@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dialog,DialogContent,DialogTitle,DialogActions, Typography } from '@material-ui/core';
 import { Button } from '@material-ui/core';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
 import { DialogComponentStyle } from './DialogComponentStyle';
 import Slide from '@mui/material/Slide';
@@ -16,7 +16,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   
 
 export default function DialogComponent (props) {
-    const history = useHistory();
+    const navigate = useNavigate();
     const {title,open,firstButton,secondButton,children,openDialog,closeDialog} = props;
     const classes = useStyle();
 
@@ -25,11 +25,11 @@ export default function DialogComponent (props) {
             closeDialog();
         }
         openDialog(false);
-        history.push('/');
+        navigate('/');
     }
 
     const handleAccept = () => {
-        history.push('/');
+        navigate('/');
     }
 
     return <Dialog 

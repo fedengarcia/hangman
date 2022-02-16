@@ -8,7 +8,7 @@ import HangManFigure from '../HangManFigure/HangManFigure';
 import { showNotification as show} from '../../helpers/helpers';
 import { checkWin } from '../../helpers/helpers';
 import HangManNotification from '../HangManNotification/HangManNotification';
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import HangManHeader from '../Header/HangManHeader';
 
 const useStyle = makeStyles((theme) => HangManGameContainerStyle(theme))
@@ -24,7 +24,7 @@ const HangManGameContainer = () => {
 
 
     const classes = useStyle();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     
 
@@ -52,10 +52,10 @@ const HangManGameContainer = () => {
         }
         if(checkWin(correctLetters,wrongLetters,selectedWord) === 'win'){
             setPlay(false);
-            history.push('/dialog/winDialog');
+            navigate('/dialog/winDialog');
         }else if (checkWin(correctLetters,wrongLetters,selectedWord) === 'lose') {
             setPlay(false);
-            history.push('/dialog/loseDialog');
+            navigate('/dialog/loseDialog');
         }else {
             window.addEventListener('keydown', handleKeyPress);
             return () => window.removeEventListener('keydown',handleKeyPress);
@@ -64,7 +64,7 @@ const HangManGameContainer = () => {
 
         
         
-    }, [correctLetters,wrongLetters,play,history]);
+    }, [correctLetters,wrongLetters,play,navigate]);
 
     
     

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import DialogContainer from '../DialogContainer/DialogContainer';
 import HangManGameContainer from '../HangManGameContainer/HangManGameContainer';
 import GameContainer from '../GameContainer/GameContainer';
@@ -12,25 +12,13 @@ const Router = () => {
 
     return(
         <BrowserRouter>
-        <Switch>
-            
-            <Route exact path="/">
-                <GameContainer/>
-            </Route>
-
-            <Route path="/hangMan">
-                <HangManGameContainer/>
-            </Route>
-
-            <Route path="/memoTest">
-                <MemoTestGameContainer/>
-            </Route>
-
-            <Route path="/dialog/:dialogType">
-                <DialogContainer/>
-            </Route>
-            
-        </Switch>
+            <Routes>
+                <Route exact path='/' element={<GameContainer/>} />
+                <Route path='/hangMan' element={<HangManGameContainer/>} />
+                <Route path='/memoTest' element={<MemoTestGameContainer/>} />
+                <Route path='/dialog/:dialogType' element={<DialogContainer/>} />
+                
+            </Routes>
         </BrowserRouter>
     )
 }
