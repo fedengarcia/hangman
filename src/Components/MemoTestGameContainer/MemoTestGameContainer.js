@@ -13,10 +13,9 @@ const MemoTestGameContainer = () => {
 
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon?limit=10').then(res => {
-            console.log(res);
-            setItems(res)
+            setItems(res.data.results)
         }).catch(err => {
-            console.log('Ocurrio un error',err);
+            console.log('Ocurrio un error al cargar datos',err);
         })
     }, []);
 
