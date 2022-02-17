@@ -20,3 +20,17 @@ export function checkWin (correct, wrong, word) {
 
     return status;
 }
+
+export function shuffleArray (array) {
+    // console.log("SIN SHUFFLE",array)
+    let i = array.length - 1;
+    for (; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+    // console.log("CON SHUFFLE",array)
+
+}

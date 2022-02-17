@@ -1,7 +1,7 @@
-export const MemoTestListStyle = (theme) => ({
-    gameContainer:{
-        width:'auto',
-        height: '100vh',
+export const MemoTestItemStyle = (theme) => ({
+    itemContainer:{
+        width:'100%',
+        height: 'auto',
         display:'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
