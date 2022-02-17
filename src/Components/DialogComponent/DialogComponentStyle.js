@@ -1,7 +1,6 @@
 export const DialogComponentStyle = (theme) => ({
     button:{
         backgroundColor:'#CA8B41',
-        width:'100%',
         color:'black',
         '&:hover':{
             backgroundColor: '#FFBE74'
