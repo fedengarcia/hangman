@@ -22,13 +22,13 @@ const MemoTestList = ({items}) => {
             spacing={2}>
             
             {shuffleArray(items).map((item,i) => 
-            <Grid item xs={4} key={i}>
+            <Grid item xs={4} key={i} className={classes.gridItem}>
                 <MemoTestItem item={item}/>
             </Grid>
             )}
 
             {shuffleArray(items).map((item,i) => 
-            <Grid item xs={4} key={i}>
+            <Grid item xs={4} key={i} className={classes.gridItem}>
                 <MemoTestItem item={item}/>
             </Grid>
             )}
