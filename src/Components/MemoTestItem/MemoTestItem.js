@@ -16,7 +16,6 @@ const MemoTestItem = ({item}) => {
     const handleClickItem = (name) => {
         setVisibleItem(false);
         setHiddenItem(true);
-        console.log(name);
     }
 
     return(<>
