@@ -1,27 +1,26 @@
 export const MemoTestItemStyle = (theme) => ({
-    itemContainer:{
-        width:'100%',
-        height: 'auto',
+    memoItem:{
         display:'flex',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'column',
-    },
-    visibleItem:{
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center',
-        height: '5em',
-        width: '5em',
         cursor: 'pointer',
-        backgroundColor: 'red',
+        overflow: 'hidden',
+        width:'60%',
+        height: '100%',
     },
-    hiddenItem:{
-        display:'flex',
-        alignItems:'center',
-        justifyContent:'center',
-        height: '5em',
-        width: '5em',
-        cursor: 'pointer',
-    }
+    memoItemFront:{
+        overflow: 'hidden',
+        height: '100%',
+        width: '100%',
+        borderRadius: '1em',
+        backgroundColor: '#84DCCF',
+    },
+    memoItemBack:{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position:'absolute',
+        height: '100%',
+        width: '100%',
+    },
 })

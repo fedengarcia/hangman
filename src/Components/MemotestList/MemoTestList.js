@@ -14,28 +14,11 @@ const MemoTestList = ({items}) => {
 
     return(
     <div className={classes.gameContainer}>
-        <Grid 
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            spacing={2}>
+        <div className={classes.memoBoard}>
             
-            {shuffleArray(items).map((item,i) => 
-            <Grid item xs={4} key={i} className={classes.gridItem}>
-                <MemoTestItem item={item}/>
-            </Grid>
-            )}
+            {shuffleArray(items).map((item,i) => <MemoTestItem key={i} item={item}/>)}
 
-            {shuffleArray(items).map((item,i) => 
-            <Grid item xs={4} key={i} className={classes.gridItem}>
-                <MemoTestItem item={item}/>
-            </Grid>
-            )}
-
-
-
-        </Grid>
+        </div>
     </div>
     )
 }

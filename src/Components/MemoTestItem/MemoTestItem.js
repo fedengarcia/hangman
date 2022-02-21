@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useContext} from 'react';
 import { makeStyles } from '@material-ui/core';
 import { MemoTestItemStyle } from './MemoTestItemStyle';
 
@@ -9,33 +9,28 @@ const MemoTestItem = ({item}) => {
     const [visibleItem,setVisibleItem] = useState(true);
     const [allowClick,setAllowClick] = useState(true);
 
-
+    console.log(item.memoItem.url)
     const classes = useStyles();
 
 
     const handleClickItem = (name) => {
+        console.log("CLICKEASTE --->", name);
         setVisibleItem(false);
         setHiddenItem(true);
     }
 
-    return(<>
-        {allowClick && <div className={classes.itemContainer} onClick={() => handleClickItem(item.name)}>
+    return(
+        <div className={classes.memoItem}>
 
-
-            {visibleItem && 
-                <div className={classes.visibleItem}>
-                    <h1>?</h1>
+                <div className={`${classes.memoItemFront} ${classes.memoItemFlipped}`} onClick={() => handleClickItem(item.memoItem.name)}>
                 </div>
-            }
 
-            {hiddenItem && 
-                <div className={classes.hiddenItem}>
-                    <h1>{item.name}</h1>
+                <div className={classes.memoItemBack}>
+                    <img src={item.memoItem.url} alt='memoimg'/>
+                    <h1>{item.memoItem.name}</h1>
                 </div>
-            }
-            
-        </div>}
-        </>
+
+        </div>
         )
 }
 

@@ -22,15 +22,9 @@ export function checkWin (correct, wrong, word) {
 }
 
 export function shuffleArray (array) {
-    // console.log("SIN SHUFFLE",array)
-    let i = array.length - 1;
-    for (; i > 0; i--) {
+    for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        const temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+        [array[i],array[j]] = [array[j],array[i]];
     }
     return array;
-    // console.log("CON SHUFFLE",array)
-
 }
