@@ -6,9 +6,10 @@ export const GameContainerStyle = (theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-
+        backgroundColor: '#F3D5BD',
     },
     games:{
+        backgroundColor: '#789dfe',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',

@@ -2,7 +2,7 @@ import React from 'react';
 import MemoTestItem from '../MemoTestItem/MemoTestItem';
 import { MemoTestListStyle } from './MemoTestListStyle';
 import { makeStyles } from '@material-ui/core';
-import { shuffleArray } from '../../helpers/helpers';
+import MemoTestHeader from '../Header/MemoTestHeader';
 
 
 const useStyles = makeStyles((theme) => MemoTestListStyle(theme));
@@ -12,9 +12,11 @@ const MemoTestList = (props) => {
     const classes = useStyles();
     return(
     <div className={classes.gameContainer}>
+        <MemoTestHeader/>
+
         <div className={classes.memoBoard}>
 
-            {shuffleArray(props.items).map((item,i) => <MemoTestItem key={i} item={item} handleClickMemoItem={props.handleClickMemoItem} />)}
+            {props.items.map((item,i) => <MemoTestItem key={i} item={item} handleClickMemoItem={props.handleClickMemoItem}/>)}
 
         </div>
     </div>

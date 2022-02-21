@@ -1,11 +1,13 @@
 export const MemoTestListStyle = (theme) => ({
     gameContainer:{
         width:'100%',
-        height: '75vh',
+        height: '100vh',
         display:'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
         flexDirection: 'column',
+        backgroundColor: '#F3D5BD',
+        overflow: 'hidden',
     },
     memoBoard:{
         display:'grid',

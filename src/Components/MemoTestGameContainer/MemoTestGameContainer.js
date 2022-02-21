@@ -1,7 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import MemoTestList from '../MemotestList/MemoTestList';
 import axios from 'axios'
-import MemoTestHeader from '../Header/MemoTestHeader';
 import { shuffleArray } from '../../helpers/helpers';
 
 const MemoTestGameContainer = () => {
@@ -32,7 +31,6 @@ const MemoTestGameContainer = () => {
 
     return(
     <>
-    <MemoTestHeader/>
     <MemoTestList items={memoItems} handleClickMemoItem={handleClickMemoItem}/>
 
     </>)

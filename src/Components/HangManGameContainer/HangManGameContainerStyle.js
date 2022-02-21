@@ -3,7 +3,7 @@ export const HangManGameContainerStyle = (theme) => ({
         display:'flex',
         alignItems: 'center',
         flexDirection: 'column',
-        backgroundColor: '#F1C35C',
+        backgroundColor: '#F3D5BD',
         height: '100vh',
         margin: 0,
         padding: 0,
@@ -19,7 +19,7 @@ export const HangManGameContainerStyle = (theme) => ({
     notificationContainer:{
         width:'100%',
         height: '4.5em',
-        backgroundColor: '#F1C35C',
+        backgroundColor: '#F3D5BD',
         display:'flex',
         justifyContent:'center',
         alignItems:'center',

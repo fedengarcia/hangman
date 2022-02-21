@@ -20,7 +20,5 @@ export const MemoTestItemStyle = (theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         position:'absolute',
-        height: '100%',
-        width: '100%',
     },
 })

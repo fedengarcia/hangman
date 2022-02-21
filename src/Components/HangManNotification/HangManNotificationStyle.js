@@ -1,6 +1,6 @@
 export const HangManNotificationStyle = (theme) => ({
     notificationContainer: {
-        backgroundColor: '#CA8B41',
+        backgroundColor: '#F3D5BD',
         borderRadius: '10px 10px 0 0',
         bottom: '-50px',
         position:'absolute',
