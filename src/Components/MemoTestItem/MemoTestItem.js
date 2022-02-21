@@ -16,20 +16,18 @@ const MemoTestItem = ({item, handleClickMemoItem}) => {
         }).catch(err => {
             console.log('err al cargar la img')
         })
-
-
-    }, []);
+    }, [item]);
 
 
     return(
-        <div className={classes.memoItem} onClick={() => handleClickMemoItem(item.memoItem.name)}>
+        <div className={classes.memoItem} onClick={() => handleClickMemoItem(item)}>
 
-                <div className={`${classes.memoItemFront} ${classes.memoItemFlipped}`} >
-                </div>
+                {!item.flipped && <div className={`${classes.memoItemFront} ${classes.memoItemFlipped}`} >
+                </div>}
 
-               <div className={classes.memoItemBack}>
+               {item.flipped && <div className={classes.memoItemBack}>
                     <img src={img} alt='memoimg'/>
-                </div>
+                </div>}
 
         </div>
         )
