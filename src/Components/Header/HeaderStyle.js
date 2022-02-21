@@ -7,7 +7,6 @@ export const HeaderStyle = (theme) => ({
         flexDirection: 'row',
         width: '100%',
         
-        
         '& > h1':{
             fontSize: '2em',
             textShadow: '3px 3px 7px #1519BC',
@@ -19,7 +18,8 @@ export const HeaderStyle = (theme) => ({
         display: 'flex',
         position: 'absolute',
         left: '2em',
-        width: 'auto'
+        width: 'auto',
+        zIndex: '2'
     },
     arrowBackIcon:{
         borderRadius: '10em',

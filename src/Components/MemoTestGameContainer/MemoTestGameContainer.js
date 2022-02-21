@@ -25,10 +25,15 @@ const MemoTestGameContainer = () => {
         
     }, []);
 
+
+    const handleClickMemoItem = (name) => {
+        console.log(name)
+    }
+
     return(
     <>
     <MemoTestHeader/>
-    <MemoTestList items={memoItems}/>
+    <MemoTestList items={memoItems} handleClickMemoItem={handleClickMemoItem}/>
 
     </>)
 }

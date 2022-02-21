@@ -1,33 +1,34 @@
-import React,{useState,useContext} from 'react';
+import React,{useState,useEffect} from 'react';
 import { makeStyles } from '@material-ui/core';
 import { MemoTestItemStyle } from './MemoTestItemStyle';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => MemoTestItemStyle(theme));
 
-const MemoTestItem = ({item}) => {
-    const [hiddenItem,setHiddenItem] = useState(false);
-    const [visibleItem,setVisibleItem] = useState(true);
-    const [allowClick,setAllowClick] = useState(true);
-
-    console.log(item.memoItem.url)
+const MemoTestItem = ({item, handleClickMemoItem}) => {
+    const [img,setImg] = useState(undefined);
     const classes = useStyles();
 
 
-    const handleClickItem = (name) => {
-        console.log("CLICKEASTE --->", name);
-        setVisibleItem(false);
-        setHiddenItem(true);
-    }
+    useEffect(() => {
+        axios.get(item.memoItem.url).then(res => {
+            setImg(res.data.sprites.front_shiny);
+        }).catch(err => {
+            console.log('err al cargar la img')
+        })
+
+
+    }, []);
+
 
     return(
-        <div className={classes.memoItem}>
+        <div className={classes.memoItem} onClick={() => handleClickMemoItem(item.memoItem.name)}>
 
-                <div className={`${classes.memoItemFront} ${classes.memoItemFlipped}`} onClick={() => handleClickItem(item.memoItem.name)}>
+                <div className={`${classes.memoItemFront} ${classes.memoItemFlipped}`} >
                 </div>
 
-                <div className={classes.memoItemBack}>
-                    <img src={item.memoItem.url} alt='memoimg'/>
-                    <h1>{item.memoItem.name}</h1>
+               <div className={classes.memoItemBack}>
+                    <img src={img} alt='memoimg'/>
                 </div>
 
         </div>
