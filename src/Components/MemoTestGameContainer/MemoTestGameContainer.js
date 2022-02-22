@@ -5,7 +5,8 @@ import { shuffleArray } from '../../helpers/helpers';
 
 const MemoTestGameContainer = () => {
     const [memoItems,setMemoItems] = useState([]);
-    const [itemsCheck,setItemsCheck] = useState([]);
+    // const [itemsCheck,setItemsCheck] = useState([]);
+    const [selectedMemoItem,setSelectedMemoItem] = useState(null);
     const [count, setCount] = useState(0);
     const [play,setPlay] = useState(true);
 
@@ -15,7 +16,7 @@ const MemoTestGameContainer = () => {
         if(play){
             axios.get('https://pokeapi.co/api/v2/pokemon?limit=6').then(res => {
                 const shuffleMemoArray = shuffleArray([...res.data.results,...res.data.results]);
-                setMemoItems(shuffleMemoArray.map((memoItem,i) => ({memoItem, flipped: false})));
+                setMemoItems(shuffleMemoArray.map((memoItem,i) => ({index: i, memoItem, flipped: false})));
             }).catch(err => {
                 console.log('Ocurrio un error al cargar datos',err);
             })
@@ -28,25 +29,27 @@ const MemoTestGameContainer = () => {
 
 
     const handleClickMemoItem = (item) => {
-        if(itemsCheck.length < 2){
-            item.flipped = true;
-            setItemsCheck([...itemsCheck,item.memoItem.name])
+        const flippedMemoItem = {...item,flipped:true};
+        let memoItemsCopy = [...memoItems];
+        memoItemsCopy.splice(item.index,1,flippedMemoItem);
+        setMemoItems(memoItemsCopy);
+
+        if(selectedMemoItem === null){
+           setSelectedMemoItem(item);
+        }else if(selectedMemoItem.memoItem.name === item.memoItem.name){
+           setSelectedMemoItem(null);
         }else{
-            if(itemsCheck[0] === itemsCheck[1]){
-                setCount(count + 2);
-                if(count === 12){
-                    setPlay(false);
-                }
-                setItemsCheck([])
-            }else{
-                setItemsCheck([])
-            }
-            
+
+            setTimeout(() => {
+                memoItemsCopy.splice(item.index,1,item)
+                memoItemsCopy.splice(selectedMemoItem.index,1,selectedMemoItem)
+                setMemoItems(memoItemsCopy);
+                setSelectedMemoItem(null);
+            }, 1000);
+
         }
         
         // console.log(item.memoItem.name);
-        console.log("PUNTOS",count);
-        console.log("ITEMS A COMPARAR ",itemsCheck);
     }
 
     return(
