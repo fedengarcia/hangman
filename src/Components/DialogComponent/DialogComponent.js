@@ -21,6 +21,7 @@ export default function DialogComponent (props) {
     const classes = useStyle();
 
     const handleClose = () => {
+
         if(closeDialog){
             closeDialog();
         }
@@ -29,7 +30,17 @@ export default function DialogComponent (props) {
     }
 
     const handleAccept = () => {
-        navigate('/hangMan');
+        console.log(window.location.pathname);
+        if(window.location.pathname === '/dialog/winDialogHangMan'){
+            navigate('/hangMan');
+        }
+        if(window.location.pathname === '/dialog/loseDialogHangMan'){
+            console.log("entro")
+            navigate('/hangMan');
+        }
+        if(window.location.pathname === '/dialog/winDialogMemoTest'){
+            navigate('/memoTest');
+        }
     }
 
     return <Dialog 

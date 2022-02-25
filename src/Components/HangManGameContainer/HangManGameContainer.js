@@ -52,10 +52,10 @@ const HangManGameContainer = () => {
         }
         if(checkWin(correctLetters,wrongLetters,selectedWord) === 'win'){
             setPlay(false);
-            navigate('/dialog/winDialog');
+            navigate('/dialog/winDialogHangMan');
         }else if (checkWin(correctLetters,wrongLetters,selectedWord) === 'lose') {
             setPlay(false);
-            navigate('/dialog/loseDialog');
+            navigate('/dialog/loseDialogHangMan');
         }else {
             window.addEventListener('keydown', handleKeyPress);
             return () => window.removeEventListener('keydown',handleKeyPress);

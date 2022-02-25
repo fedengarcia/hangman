@@ -11,11 +11,14 @@ export default function PopUpContainer  ()  {
 
     useEffect(() => {
         if(dialogType !== undefined){
-            if(dialogType === "winDialog"){
+            if(dialogType === "winDialogHangMan"){
                 setOpenWinDialog(true);
             }
-            if(dialogType === "loseDialog"){
+            if(dialogType === "loseDialogHangMan"){
                 setOpenLoseDialog(true);
+            }
+            if(dialogType === "winDialogMemoTest"){
+                setOpenWinDialog(true);
             }
             
         }

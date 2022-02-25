@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react';
 import MemoTestList from '../MemotestList/MemoTestList';
 import axios from 'axios'
 import { shuffleArray } from '../../helpers/helpers';
+import { useNavigate } from 'react-router-dom';
 
 const MemoTestGameContainer = () => {
     const [memoItems,setMemoItems] = useState([]);
@@ -9,6 +10,7 @@ const MemoTestGameContainer = () => {
     const [selectedMemoItem,setSelectedMemoItem] = useState(null);
     const [count, setCount] = useState(0);
     const [play,setPlay] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         
@@ -25,7 +27,7 @@ const MemoTestGameContainer = () => {
 
 
         
-    }, []);
+    }, [play]);
 
 
     const handleClickMemoItem = (item) => {
@@ -33,11 +35,18 @@ const MemoTestGameContainer = () => {
         let memoItemsCopy = [...memoItems];
         memoItemsCopy.splice(item.index,1,flippedMemoItem);
         setMemoItems(memoItemsCopy);
-
+        
         if(selectedMemoItem === null){
            setSelectedMemoItem(item);
         }else if(selectedMemoItem.memoItem.name === item.memoItem.name){
            setSelectedMemoItem(null);
+           setCount(count + 2)
+           
+           console.log(count);
+            if(count === 10){
+                setPlay(false);
+                navigate("/dialog/winDialogMemoTest");
+            }
         }else{
 
             setTimeout(() => {
@@ -48,6 +57,7 @@ const MemoTestGameContainer = () => {
             }, 1000);
 
         }
+
         
         // console.log(item.memoItem.name);
     }

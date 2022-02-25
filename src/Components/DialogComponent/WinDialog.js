@@ -11,6 +11,8 @@ const WinDialog = ({openWinDialog,setOpenWinDialog}) => {
         openDialog={setOpenWinDialog}
         closeDialog={() => setOpenWinDialog(false)}
         handleConfirm={() => setOpenWinDialog(false)}
+        
+
 
         title='GANASTE!'
         firstButton='VOLVER AL INICIO'

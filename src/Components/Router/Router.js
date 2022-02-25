@@ -12,11 +12,12 @@ const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route exact path='/' element={<GameContainer/>} />
-                <Route path='/hangMan' element={<HangManGameContainer/>} />
-                <Route path='/memoTest' element={<MemoTestGameContainer/>} />
-                <Route path='/dialog/:dialogType' element={<DialogContainer/>} />
+                <Route exact path='/' element={<GameContainer/>}/>
+                <Route path='/hangMan' element={<HangManGameContainer/>}/>
+                <Route path='/memoTest' element={<MemoTestGameContainer/>}/>
+                <Route path='/dialog/:dialogType' element={<DialogContainer/>}/>
                 
+
             </Routes>
         </BrowserRouter>
     )
