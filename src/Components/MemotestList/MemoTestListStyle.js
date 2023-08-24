@@ -14,11 +14,16 @@ export const MemoTestListStyle = (theme) => ({
         overflow: 'hidden',
     },
     memoBoard:{
+        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;',
         display:'grid',
-        gridTemplateColumns: 'repeat(3,1fr)',
-        gridGap:'0.2em',
-        width: '75%',
-        height: '75vh',
+        gridTemplateColumns: 'repeat(4,4fr)',
+        backgroundColor: '#ffffff8f',
+        borderRadius: '8px',
+        padding: '2em 0',
+        marginBottom: '2em',
+        gridGap:'0.5em',
+        width: '50%',
+        height: '70vh',
         justifyItems: 'center',
     }
 })
