@@ -6,7 +6,11 @@ export const MemoTestListStyle = (theme) => ({
         justifyContent: 'flex-start',
         alignItems: 'center',
         flexDirection: 'column',
-        backgroundColor: '#F3D5BD',
+        backgroundImage: 'url(/background.jpg)',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundSize: '100% 100%',
         overflow: 'hidden',
     },
     memoBoard:{
