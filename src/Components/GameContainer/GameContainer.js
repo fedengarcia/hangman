@@ -12,7 +12,7 @@ const GameContainer = () => {
     return (
         <div className={classes.gameContainer}>
             <div className={classes.games}>
-                <h1>JUEGA!</h1>
+                <h1>Let's play !</h1>
                 <Link to="/hangMan" className={classes.linkStyle}><Button variant="contained" className={classes.button}>HangMan</Button></Link>
                 <Link to="/memoTest" className={classes.linkStyle}><Button variant="contained" className={classes.button}>Memotest</Button></Link>
             </div>
