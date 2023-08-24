@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react';
 import { makeStyles } from '@material-ui/core';
 import { MemoTestItemStyle } from './MemoTestItemStyle';
 import axios from 'axios';
+import Animate from 'animate.css-react'
+import { Animated } from 'react-animated-css';
 
 const useStyles = makeStyles((theme) => MemoTestItemStyle(theme));
 
@@ -22,13 +24,20 @@ const MemoTestItem = ({item, handleClickMemoItem}) => {
     return(
         <div className={classes.memoItem} onClick={() => handleClickMemoItem(item)}>
 
-                {!item.flipped && <div className={`${classes.memoItemFront} ${classes.memoItemFlipped}`} >
-                </div>}
+                {!item.flipped &&
+                <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true} className={`${classes.memoItemFront}`}>
+ 
+                </Animated>
+                }
 
-               {item.flipped && <div className={classes.memoItemBack}>
+               {item.flipped &&
+               <Animated animationIn="flipInY" animationOut="flipOutY" isVisible={true}>
+               <div className={classes.memoItemBack}>
                     <img src={img} alt='memoimg'/>
-                </div>}
+                </div>
 
+               </Animated> 
+            }
         </div>
         )
 }
