@@ -13,7 +13,6 @@ const MemoTestGameContainer = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        
 
         if(play){
             axios.get('https://pokeapi.co/api/v2/pokemon?limit=8').then(res => {

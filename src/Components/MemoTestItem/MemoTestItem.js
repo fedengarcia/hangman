@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react';
 import { makeStyles } from '@material-ui/core';
 import { MemoTestItemStyle } from './MemoTestItemStyle';
 import axios from 'axios';
-import Animate from 'animate.css-react'
 import { Animated } from 'react-animated-css';
 
 const useStyles = makeStyles((theme) => MemoTestItemStyle(theme));
