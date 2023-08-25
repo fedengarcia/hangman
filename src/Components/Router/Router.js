@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import DialogContainer from '../DialogContainer/DialogContainer';
-import HangManGameContainer from '../HangManGameContainer/HangManGameContainer';
+import HangManGameContainer from '../HangMan/HangManGameContainer/HangManGameContainer';
 import GameContainer from '../GameContainer/GameContainer';
-import MemoTestGameContainer from '../MemoTestGameContainer/MemoTestGameContainer';
+import MemoTestGameContainer from '../MemoTest/MemoTestGameContainer/MemoTestGameContainer';
 
 
 const Router = () => {

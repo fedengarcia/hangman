@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import MemoTestList from '../MemotestList/MemoTestList';
 import axios from 'axios'
-import { shuffleArray } from '../../helpers/helpers';
+import { shuffleArray } from '../../../helpers/helpers';
 import { useNavigate } from 'react-router-dom';
 
 const MemoTestGameContainer = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import MemoTestItem from '../MemoTestItem/MemoTestItem';
 import { MemoTestListStyle } from './MemoTestListStyle';
 import { makeStyles } from '@material-ui/core';
-import MemoTestHeader from '../Header/MemoTestHeader';
+import MemoTestHeader from '../../Header/MemoTestHeader';
 import {Animated} from "react-animated-css";
 
 

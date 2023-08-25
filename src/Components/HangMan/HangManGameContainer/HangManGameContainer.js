@@ -1,16 +1,15 @@
 import React,{useState,useEffect} from 'react';
-import data from '../../data.json';
+import data from '../../../data.json';
 import {makeStyles} from '@material-ui/core';
 import { HangManGameContainerStyle } from './HangManGameContainerStyle';
-import HiddenWord from '../Word/HiddenWord';
-import WrongLetters from '../Word/WrongLetters';
+import HiddenWord from '../../Word/HiddenWord';
+import WrongLetters from '../../Word/WrongLetters';
 import HangManFigure from '../HangManFigure/HangManFigure';
-import { showNotification as show} from '../../helpers/helpers';
-import { checkWin } from '../../helpers/helpers';
+import { showNotification as show} from '../../../helpers/helpers';
+import { checkWin } from '../../../helpers/helpers';
 import HangManNotification from '../HangManNotification/HangManNotification';
 import {useNavigate} from 'react-router-dom';
-import HangManHeader from '../Header/HangManHeader';
-import { Animated } from 'react-animated-css';
+import HangManHeader from '../../Header/HangManHeader';
 
 const useStyle = makeStyles((theme) => HangManGameContainerStyle(theme))
 
@@ -84,10 +83,10 @@ const HangManGameContainer = () => {
                 <WrongLetters wrongLetters={wrongLetters}/>    
             </div>
                 <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters} setCorrectLetters={setCorrectLetters}/>
-            <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true} className={classes.notificationContainer}>
-                <HangManNotification showNotification={showNotification}/>
-            </Animated>
 
+            <div className={classes.notificationContainer}>
+                <HangManNotification showNotification={showNotification}/>
+            </div>
     </div>
     </>)
 }
