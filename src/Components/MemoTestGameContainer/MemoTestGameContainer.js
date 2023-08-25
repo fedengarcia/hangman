@@ -16,7 +16,7 @@ const MemoTestGameContainer = () => {
         
 
         if(play){
-            axios.get('https://pokeapi.co/api/v2/pokemon?limit=12').then(res => {
+            axios.get('https://pokeapi.co/api/v2/pokemon?limit=8').then(res => {
                 const shuffleMemoArray = shuffleArray([...res.data.results,...res.data.results]);
                 setMemoItems(shuffleMemoArray.map((memoItem,i) => ({index: i, memoItem, flipped: false})));
             }).catch(err => {
