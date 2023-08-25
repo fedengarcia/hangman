@@ -10,6 +10,7 @@ import { checkWin } from '../../helpers/helpers';
 import HangManNotification from '../HangManNotification/HangManNotification';
 import {useNavigate} from 'react-router-dom';
 import HangManHeader from '../Header/HangManHeader';
+import { Animated } from 'react-animated-css';
 
 const useStyle = makeStyles((theme) => HangManGameContainerStyle(theme))
 
@@ -73,19 +74,20 @@ const HangManGameContainer = () => {
 
     <div className={classes.gameContainer}>
     <HangManHeader/>
+            <h2>Adivina la palabra</h2>
+            <h2>Ingresa una letra</h2>
 
-            <h2>Adivina la palabra - Ingresa una letra</h2>
 
             <div className={classes.figureWrongContainer}>
                 <HangManFigure wrongLetters={wrongLetters} setPlay={setPlay}/>
 
                 <WrongLetters wrongLetters={wrongLetters}/>    
             </div>
-            <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters} setCorrectLetters={setCorrectLetters}/>
-            
-            <div className={classes.notificationContainer}>
+                <HiddenWord  selectedWord={selectedWord} correctLetters={correctLetters} setCorrectLetters={setCorrectLetters}/>
+            <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true} className={classes.notificationContainer}>
                 <HangManNotification showNotification={showNotification}/>
-            </div>
+            </Animated>
+
     </div>
     </>)
 }
